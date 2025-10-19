@@ -1,0 +1,1 @@
+This coding project was also so much fun the displayProducts function was so fun seeing it come together.
