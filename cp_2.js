@@ -31,7 +31,7 @@ function displayProducts(products) {
   <div class="product">
   <h2>${u.fields.name}</h2>
   <img src="${u.fields.image[0].url}" alt="${u.fields.name}">
-  <p>${u.fields.price/100}</p>
+  <p>$${u.fields.price/100}</p>
   </div>`).join("");
 }
 

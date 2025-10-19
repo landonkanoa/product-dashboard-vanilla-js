@@ -1,0 +1,99 @@
+/* I found this online and it seems good just a css reset for propper setup leter this is the link I got it from https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Start of my code */
+body {
+    background-color: #724935;
+    color: #E8E3DD;
+    text-align: center;
+    font-family: 'Bitstream Charter', 'Sitka Text', serif;
+}
+
+header {
+    background-color: #492D25;
+    padding: 20px;
+}
+
+#product-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.product {
+    background-color: #947555;
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    margin-top: 35px;
+}
+
+.product:hover {
+    box-shadow: 7px 7px 25px #2c1c18;
+    transition: ease-in-out 0.25s;
+}
+
+.product img {
+    border-radius: 15px;
+}
+
+.product h2 {
+    font-size: 25px;
+}
+
+.product p {
+    font-size: 20px;
+}
