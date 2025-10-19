@@ -27,11 +27,10 @@ async function fetchProductsAsync() {
 //Changed displayProducts to show images names and price
 function displayProducts(products) {
   const items = document.getElementById("product-container");
-  items.innerHTML = products.slice(0,5)
-  .map ((u) => `
+  items.innerHTML = products.slice(0,5).map ((u) => `
   <div class="product">
   <h2>${u.fields.name}</h2>
-  <img src="${u.fields.image[0].url}" alt="${u.fields.name}
+  <img src="${u.fields.image[0].url}" alt="${u.fields.name}">
   <p>${u.fields.price/100}</p>
   </div>`).join("");
 }
@@ -41,4 +40,5 @@ function handleError(error) {
   console.error("An error occurred error code:", error.message);
 };
 
-fetchProductsAsync()
+fetchProductsThen();
+fetchProductsAsync();
