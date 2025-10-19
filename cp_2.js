@@ -16,7 +16,7 @@ function fetchProductsThen() {
 async function fetchProductsAsync() {
     try {
         const res = await fetch("https://www.course-api.com/javascript-store-products")
-        if (!res.ok) throw new Error(`error code: ${res.status}`);
+        if (!res.ok) throw new Error(`${res.status}`);
         const data = await res.json();
         displayProducts(data);      
     } catch (error) {
@@ -36,7 +36,9 @@ function displayProducts(products) {
   </div>`).join("");
 }
 
+//Adjusted handleError function so it is reusable and has a clear message in the console
 function handleError(error) {
-  console.error("Problem getting items:", error.message);
+  console.error("An error occurred error code:", error.message);
 };
 
+fetchProductsAsync()
